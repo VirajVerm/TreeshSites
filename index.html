@@ -1,31 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TreeshSites</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TreeshSites — Web Development Agency</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Syne:wght@400;700;800&family=DM+Sans&display=swap" rel="stylesheet"/>
+
   <style>
-    body { font-family: Arial; text-align: center; padding: 50px; }
-    h1 { color: green; }
-    button { padding: 10px 20px; cursor: pointer; }
+    :root {
+      --ink: #0e0c0a;
+      --paper: #f5f0e8;
+      --accent: #16a34a;
+      --muted: #8a7f72;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-family: 'DM Serif Display';
+    }
+
+    .btn {
+      background: var(--ink);
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+    }
   </style>
 </head>
+
 <body>
 
-  <h1>🌱 TreeshSites</h1>
-  <p>We build modern websites that grow your business.</p>
+<nav>
+  <div>TreeshSites</div>
+  <div>
+    <a href="#services">Services</a> |
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
+<section class="hero">
+  <h1>Websites that <em style="color: var(--accent)">grow</em> your business</h1>
+  <p>TreeshSites builds fast, modern, and high-converting websites.</p>
+  <a href="#contact" class="btn">Start Project</a>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Website Design</div>
+    <div class="card">E-Commerce</div>
+    <div class="card">Landing Pages</div>
+    <div class="card">SEO Optimization</div>
+  </div>
+</section>
+
+<section id="contact">
   <h2>Contact Us</h2>
-  <input id="name" placeholder="Your name"><br><br>
-  <input id="email" placeholder="Email"><br><br>
-  <textarea id="message" placeholder="Your message"></textarea><br><br>
 
-  <button onclick="send()">Send</button>
+  <input id="name" placeholder="Your name">
+  <input id="email" placeholder="Email">
+  <input id="project" placeholder="Project type">
+  <textarea id="message" placeholder="Your message"></textarea>
 
-  <script>
-    function send() {
-      alert("Form submitted (backend coming next)");
-    }
-  </script>
+  <button onclick="send()">Send Message</button>
+</section>
+
+<footer>
+  © 2026 TreeshSites — Web Solutions
+</footer>
+
+<script>
+async function send() {
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    project: document.getElementById("project").value,
+    message: document.getElementById("message").value
+  };
+
+  alert("Form will work after backend setup 🚀");
+}
+</script>
 
 </body>
 </html>
