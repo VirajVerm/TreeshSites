@@ -1,2 +1,33 @@
 # TreeshSites
 TreeshSties Softeware providers
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TreeshSites</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial; text-align: center; padding: 50px; }
+    h1 { color: green; }
+    button { padding: 10px 20px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <h1>🌱 TreeshSites</h1>
+  <p>We build modern websites that grow your business.</p>
+
+  <h2>Contact Us</h2>
+  <input id="name" placeholder="Your name"><br><br>
+  <input id="email" placeholder="Email"><br><br>
+  <textarea id="message" placeholder="Your message"></textarea><br><br>
+
+  <button onclick="send()">Send</button>
+
+  <script>
+    function send() {
+      alert("Form submitted (backend coming next)");
+    }
+  </script>
+
+</body>
+</html>
